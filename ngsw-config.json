@@ -1,0 +1,57 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/icons/**"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/css?family=Roboto"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "cache-first",
+      "urls": [
+        "http://josvile.vuejs.s3-website.eu-west-3.amazonaws.com/assets/launchagencies.json",
+        "http://josvile.vuejs.s3-website.eu-west-3.amazonaws.com/assets/launchmissions.json",
+        "http://josvile.vuejs.s3-website.eu-west-3.amazonaws.com/assets/launchstatus.json"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxsize": 10,
+        "maxAge": "1d"
+      }
+    },
+    {
+      "name": "api-first",
+      "urls": [
+        "http://josvile.vuejs.s3-website.eu-west-3.amazonaws.com/assets/launchlibrary.json"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxsize": 100,
+        "maxAge": "1h",
+        "timeout": "3s"
+      }
+    }
+  ]
+}

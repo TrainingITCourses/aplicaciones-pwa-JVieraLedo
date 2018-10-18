@@ -1,0 +1,13 @@
+<div>
+  <form [formGroup]="optionsForm" class="selector">
+    <select name="options" formControlName="option">
+      <option *ngFor="let option of options" [value]="option.value">{{option.name}}</option>
+    </select>
+  </form>
+
+  <form [formGroup]="valuesForm" class="selector">
+    <select name="values" formControlName="value">
+      <option *ngFor="let value of values" [value]="value.id">{{value.name}}</option>
+    </select>
+  </form>
+</div>

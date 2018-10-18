@@ -1,0 +1,31 @@
+<div>
+  <table *ngIf="(launches$ | async).filteredLaunches.length">
+    <colgroup>
+      <col span="1" style="width: 10%;">
+      <col span="1" style="width: 75%;">
+      <col span="1" style="width: 15%;">
+    </colgroup>
+    <thead>
+    <tr *ngFor="let col of cols">
+      <th><b>{{col.id}}</b></th>
+      <th><b>{{col.name}}</b></th>
+      <th>
+        <h3>
+          <em>{{txt}}</em>
+          <small>{{(launches$ | async).filteredLaunches.length}}</small>
+        </h3>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let launch of (launches$ | async).filteredLaunches; let i = index">
+      <td>
+        {{ i }}
+      </td>
+      <td colspan="2">
+        {{ launch.name }}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

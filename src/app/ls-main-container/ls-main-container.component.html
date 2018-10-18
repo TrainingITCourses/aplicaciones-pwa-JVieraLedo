@@ -1,0 +1,8 @@
+<p *ngIf="isLoading">
+  {{loadingMsg}}.
+</p>
+<div *ngIf="!isLoading">
+  <h2 class="title">{{tittle}}</h2>
+  <ls-searchers></ls-searchers>
+  <ls-launches-table></ls-launches-table>
+</div>

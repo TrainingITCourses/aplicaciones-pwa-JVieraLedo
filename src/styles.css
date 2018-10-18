@@ -1,0 +1,56 @@
+.app-wrapper {
+  width: 90%;
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.selector {
+  padding: 10px;
+  width: 40%;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  width: 268px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #3b8ec2;
+  color: #fff;
+}
+
+select:focus {
+  outline: 0;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  text-align: left;
+  vertical-align: middle;
+  height: 35px;
+  background-color: rgba(7, 57, 79, 0.77);
+  color: white;
+}
+
+table tr {
+  vertical-align: middle;
+  height: 25px;
+}

@@ -1,0 +1,95 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.525f21ffcc0303382859.js",
+        "/polyfills.2f4a59095805af02bd79.js",
+        "/runtime.a66f828dca56eeb90e02.js",
+        "/styles.f8f75dbb8ebed63dddec.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto"
+      ]
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "cache-first",
+      "patterns": [
+        "http:\\/\\/josvile\\.vuejs\\.s3-website\\.eu-west-3\\.amazonaws\\.com\\/assets\\/launchagencies\\.json",
+        "http:\\/\\/josvile\\.vuejs\\.s3-website\\.eu-west-3\\.amazonaws\\.com\\/assets\\/launchmissions\\.json",
+        "http:\\/\\/josvile\\.vuejs\\.s3-website\\.eu-west-3\\.amazonaws\\.com\\/assets\\/launchstatus\\.json"
+      ],
+      "strategy": "performance",
+      "maxAge": 86400000,
+      "version": 1
+    },
+    {
+      "name": "api-first",
+      "patterns": [
+        "http:\\/\\/josvile\\.vuejs\\.s3-website\\.eu-west-3\\.amazonaws\\.com\\/assets\\/launchlibrary\\.json"
+      ],
+      "strategy": "freshness",
+      "maxAge": 3600000,
+      "timeoutMs": 3000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "db0c38ad95de252ae3299111e9a2ea6f8715c93d",
+    "/assets/icons/icon-144x144.png": "fe01a94caa9376b9aa2c038239bd4507604f11cd",
+    "/assets/icons/icon-152x152.png": "12afb9e003790e543355f9e36c49341606252a4a",
+    "/assets/icons/icon-192x192.png": "6c6afffb57f9f291d2c5f6369771a575743a37a0",
+    "/assets/icons/icon-384x384.png": "a2b796dc39bc11a78ed3b8d2fdae4dc5046c9cec",
+    "/assets/icons/icon-512x512.png": "ab43f71c98dcadca25d16548323ea5587cba4645",
+    "/assets/icons/icon-72x72.png": "9ac53c347d061bc183e813ee303daf4f36e317b0",
+    "/assets/icons/icon-96x96.png": "2cf1efbe27282a1fa6afdbd2aeb266d74791961f",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "2e7cdcf7ed512be5ee2197f1efc7a2b0a3d68600",
+    "/main.525f21ffcc0303382859.js": "095fbfc0a8d9adb4a7f71884650160dd30d67957",
+    "/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/styles.f8f75dbb8ebed63dddec.css": "50bc08f1fdfd7f65f889e99c325d3e9bba06d019"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
